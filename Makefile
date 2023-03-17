@@ -1,6 +1,5 @@
 # $Id$ Makefile for standalone CHU program
 BINDIR=/usr/local/bin
-LIBDIR=/usr/local/share/ka9q-radio
 CFLAGS=-g -O2
 
 all:	chusim

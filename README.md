@@ -5,5 +5,9 @@ yet use portaudio to write directly to the system sound device with
 minimum delay. The time code bursts are also unimplemented; only a
 mark tone is generated.
 
-I'm also told that the male French voice on MacOS speaks with a
-metropolitan (European) French accent, not a Canadian French accent.
+The audio output is raw 48 kHz PCM, 16 bits per sample, 1 channel, signed integer, little endian. To listen, do something like
+
+chusim | play -t raw -r 48000 -c 1 -b 16 -e signed-integer -
+
+(the 'play' command is implemented by the 'sox' audio package)
+

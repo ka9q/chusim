@@ -73,7 +73,8 @@ int announce(int startms,char const *message,int french){
   }
 #else // apple
   if(french){
-    system("say -v Thomas --output-file=/tmp/speakout.wav --data-format=LEI16@48000 -f /tmp/speakin;sox /tmp/speakout.wav -t raw -r 48000 -c 1 -b 16 -e signed-integer /tmp/speakout");
+    // The Nicolas voice has a French Candian accent
+    system("say -v Nicolas --output-file=/tmp/speakout.wav --data-format=LEI16@48000 -f /tmp/speakin;sox /tmp/speakout.wav -t raw -r 48000 -c 1 -b 16 -e signed-integer /tmp/speakout");
   } else {
     system("say -v Alex --output-file=/tmp/speakout.wav --data-format=LEI16@48000 -f /tmp/speakin;sox /tmp/speakout.wav -t raw -r 48000 -c 1 -b 16 -e signed-integer /tmp/speakout");
   }
